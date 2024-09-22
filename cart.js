@@ -27,7 +27,7 @@ function show_cart() {
     
             <div class="card-body text-center d-flex flex-md-row flex-col justify-content-around align-items-center flex-md-nowrap flex-wrap">
                 <h5 class="card-title w-md-25 w-100 p-1">${item.name}</h5>
-                <p class="card-text w-md-25 w-50"> ₹${item.price} X
+                <p class="card-text w-md-25 w-100"> ₹${item.price} X
                     <button class="btn btn-danger" onclick="count(${cartlist.indexOf(item)},-1)">-</button> ${item.quantity}
     
                     <button class="btn btn-success" onclick="count(${cartlist.indexOf(item)},+1)">+</button>

@@ -151,7 +151,7 @@ function show_cart_count() {
 
     let cart_count = cartlist.length;
 
-    document.getElementById("cart_count").innerText = `( ${cart_count} )`;
+    document.getElementById("cart_count").innerText = `(${cart_count})`;
 
 
 }
