@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myAccount</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-6 ms-4 text-center" id="name" href="#"></a>
+
+            <div class="navbar-nav d-flex flex-row px-5 justify-content-between">
+                <a class="nav-link active fs-5 " aria-current="page" href="home.html">Home</a>
+                <a class="nav-link active mx-3 fs-5" aria-current="page" href="cart.html">Cart <span
+                        id="cart_count"></span></a>
+                <a class="nav-link active fs-5 bg-white text-black px-3" aria-current="page" href="#">myAccount</a>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="card mx-auto w-75  p-3 my-3">
+        <img id="output" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+            class="img-fluid w-md-25 w-sm-75 p-3 rounded-circle mx-auto" alt="..." style="width: 14rem;">
+        <div class="card-body">
+            <h5 class="card-title text-center" id="accname"></h5>
+        </div>
+        <ul class=" d-flex row-cols-md-2 row-cols-1 flex-wrap">
+
+            <li class="list-group-item pt-3"> <span class="fw-bold"> Gender : </span><span id="gender"></span></li>
+            <li class="list-group-item pt-3"> <span class="fw-bold"> Date of Birth : </span><span id="dob"></span></li>
+            <li class="list-group-item pt-3"> <span class="fw-bold"> Mobile no : </span><span id="mbno"></span></li>
+            <li class="list-group-item pt-3"> <span class="fw-bold"> Email Id : </span><span id="email"></span></li>
+            <li class="list-group-item pt-3"> <span class="fw-bold"> Address : </span><span id="address"></span></li>
+
+        </ul>
+        <button class="btn btn-danger mx-auto" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+
+
+    <footer class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="text-white text-center mx-auto mt-auto">copywrite with @sandeep-m-patil</div>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        let registerLog = JSON.parse(localStorage.getItem("registerData")) || []
+        let login_name = localStorage.getItem("loginname")
+
+        document.getElementById('name').innerHTML = `<h1>Welcome ${login_name}<h1>`
+
+
+
+        let pp_img = document.getElementById("output");
+        let ppname = document.getElementById("accname");
+        let gender = document.getElementById("gender");
+        let dob = document.getElementById("dob");
+        let email = document.getElementById("email");
+        let mbno = document.getElementById("mbno");
+        let address = document.getElementById("address");
+
+        function display_detials() {
+
+            registerLog.forEach((item) => {
+                if (login_name == item.username) {
+                    pp_img.src = item.pp;
+                    ppname.innerText = login_name;
+                    gender.innerText = item.gender
+                    dob.innerText = item.dob
+                    email.innerText = item.email
+                    mbno.innerText = item.mobileno
+                    address.innerText = item.address
+
+                }
+            }
+            )
+
+
+        }
+
+
+
+        display_detials()
+
+        function logout() {
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlipZon</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid bg-primary text-center p-3">
+    <h2 class="text-white">Login in to FlipZon</h2>
+  </div>
+
+
+  <form class="pt-5 mx-auto w-50 w-md-25">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label fw-bold">Username / Name</label>
+      <input type="email" class="form-control" id="username" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary d-block mx-auto" onclick="login_des(event)">login</button>
+  </form>
+
+
+  <p id="login-info" style="text-align: center; font-weight: bold;"></p>
+
+  <p style="text-align: center;">Create an account ! <a href="register.html">Click here for Register</a>
+  </p>
+
+  
+  
+
+
+  <script src="main.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
