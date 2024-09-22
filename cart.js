@@ -33,7 +33,7 @@ function show_cart() {
                     <button class="btn btn-success" onclick="count(${cartlist.indexOf(item)},+1)">+</button>
                 </p>
     
-                <div class"w-md-25"><button class="btn btn-danger" onclick="remove_item(${cartlist.indexOf(item)})">Remove</button></div>
+                <div class"w-md-100"><button class="btn btn-danger" onclick="remove_item(${cartlist.indexOf(item)})">Remove</button></div>
             </div>
         </div>
                       `
